@@ -190,7 +190,7 @@ public class BreakMultipleWordsWithNoSpaceIntoSpace {
         T[0] = true;
         for (int i = 1; i <= s.length(); i++) {
             for (int j = 0; j < i; j++) {
-                if(T[j] && set.contains(s.substring(j, i))) {
+                if(T[j] && set.contains(s.substring(j, i-j))) {
                     T[i] = true;
                     break;
                 }
